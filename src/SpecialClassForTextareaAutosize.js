@@ -12,14 +12,14 @@ class SpecialClassForTextareaAutosize extends React.Component {
     render() {
         return (
             <div>
-                <TextareaAutosize
-                    style={{ width: "100%", border: "none", outline: "none", resize: "none", backgroundColor: "transparent", overflow: "hidden", fontStyle: "italic", fontSize: "1em", fontFamily: "Arial" }}
-                    id="untypedAnswer"
-                    name="untypedAnswer"
-                    value={this.state.questionText}
-                    onChange={(event) => this.setState({ questionText: event.target.value })}
-                    placeholder="Type the untyped answer."
-                />
+                {/*<TextareaAutosize*/}
+                {/*    style={{ width: "100%", border: "none", outline: "none", resize: "none", backgroundColor: "transparent", overflow: "hidden", fontStyle: "italic", fontSize: "1em", fontFamily: "Arial" }}*/}
+                {/*    id="untypedAnswer"*/}
+                {/*    name="untypedAnswer"*/}
+                {/*    value={this.state.questionText}*/}
+                {/*    onChange={(event) => this.setState({ questionText: event.target.value })}*/}
+                {/*    placeholder="Type the untyped answer."*/}
+                {/*/>*/}
             </div>
         )
     }
