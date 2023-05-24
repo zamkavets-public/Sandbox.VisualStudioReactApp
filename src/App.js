@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
+import TextareaAutosize from 'react-textarea-autosize';
 
 function App() {
   return (
@@ -18,7 +19,13 @@ function App() {
         >
           Learn React
               </a>
-              { uuidv4() }
+              {uuidv4()}
+              <TextareaAutosize
+                  style={{ width: "100%", border: "none", outline: "none", resize: "none", backgroundColor: "transparent", overflow: "hidden", fontStyle: "italic", fontSize: "1em", fontFamily: "Arial" }}
+                  id="questionText"
+                  name="questionText"
+                  placeholder="Type the question."
+              />
       </header>
     </div>
   );
