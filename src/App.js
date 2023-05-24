@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
-import TextareaAutosize from 'react-textarea-autosize';
+import SpecialClassForTextareaAutosize from './SpecialClassForTextareaAutosize';
 
 function App() {
     const [questionText, setQuestionText] = React.useState("123");
@@ -22,8 +22,7 @@ function App() {
         >
           Learn React
               </a>
-              {uuidv4()}
-              <TextareaAutosize/>
+              <SpecialClassForTextareaAutosize tavalue={questionText} handleChange={(event) => setQuestionText(event.target.value)}/>
       </header>
     </div>
   );
