@@ -1,12 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { v4 as uuidv4 } from 'uuid';
-import SpecialClassForTextareaAutosize from './SpecialClassForTextareaAutosize';
+import TextareaAutosize from 'react-textarea-autosize';
 
 function App() {
-    const [questionText, setQuestionText] = React.useState("123");
-    const textAreaRef = React.useRef(null);
   return (
     <div className="App">
       <header className="App-header">
@@ -21,8 +18,8 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-              </a>
-              <SpecialClassForTextareaAutosize tavalue={questionText} handleChange={(event) => setQuestionText(event.target.value)}/>
+        </a>
+        <TextareaAutosize/>
       </header>
     </div>
   );
