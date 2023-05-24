@@ -6,6 +6,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 
 function App() {
     const [questionText, setQuestionText] = React.useState("123");
+    const textAreaRef = React.useRef(null);
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +24,7 @@ function App() {
               </a>
               {uuidv4()}
               <TextareaAutosize
+                  ref={textAreaRef}
                   style={{ width: "100%", border: "none", outline: "none", resize: "none", backgroundColor: "transparent", overflow: "hidden", fontStyle: "italic", fontSize: "1em", fontFamily: "Arial" }}
                   id="questionText"
                   name="questionText"
