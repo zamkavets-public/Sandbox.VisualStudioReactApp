@@ -1,9 +1,11 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
 import TextareaAutosize from 'react-textarea-autosize';
 
 function App() {
+    const [questionText, setQuestionText] = React.useState("123");
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +26,8 @@ function App() {
                   style={{ width: "100%", border: "none", outline: "none", resize: "none", backgroundColor: "transparent", overflow: "hidden", fontStyle: "italic", fontSize: "1em", fontFamily: "Arial" }}
                   id="questionText"
                   name="questionText"
+                  value={questionText}
+                  onChange={(event) => { setQuestionText(event.target.value) } }
                   placeholder="Type the question."
               />
       </header>
