@@ -23,15 +23,7 @@ function App() {
           Learn React
               </a>
               {uuidv4()}
-              <TextareaAutosize
-                  ref={textAreaRef}
-                  style={{ width: "100%", border: "none", outline: "none", resize: "none", backgroundColor: "transparent", overflow: "hidden", fontStyle: "italic", fontSize: "1em", fontFamily: "Arial" }}
-                  id="questionText"
-                  name="questionText"
-                  value={questionText}
-                  onChange={(event) => { setQuestionText(event.target.value) } }
-                  placeholder="Type the question."
-              />
+              <TextareaAutosize/>
       </header>
     </div>
   );
