@@ -20,6 +20,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
+          
+      - name: Install packages
+        run: |
+          npm install react-textarea-autosize
 
       - name: npm install, build, and test
         run: |
