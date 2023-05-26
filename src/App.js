@@ -19,7 +19,9 @@ function App() {
         >
           Learn React
         </a>
-        <TextareaAutosize/>
+              <TextareaAutosize />
+              <p>Text</p>
+              <p>{process.env.REACT_APP_TEST_VARR}</p>
       </header>
     </div>
   );
