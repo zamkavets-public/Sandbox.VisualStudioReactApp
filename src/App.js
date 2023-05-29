@@ -20,7 +20,7 @@ function App() {
           Learn React
         </a>
         <TextareaAutosize />
-        <p>{process.env.APPSETTING_REACT_APP_TEST_VAR}</p>
+        <p>{process.env.REACT_APP_TEST_VAR}</p>
       </header>
     </div>
   );
