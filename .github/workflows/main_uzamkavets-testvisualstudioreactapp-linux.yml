@@ -41,7 +41,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: $
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
       - name: Download artifact from build job
@@ -55,7 +55,7 @@ jobs:
         with:
           app-name: 'uzamkavets-testvisualstudioreactapp-linux'
           slot-name: 'Production'
-          publish-profile: $
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FABA16A63AAC403F961AFE0681328D08 }}
           package: react.zip
 
       - name: Delete zip file
