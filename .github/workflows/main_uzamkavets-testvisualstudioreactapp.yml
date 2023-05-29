@@ -8,6 +8,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  
+env:
+  REACT_APP_TEST_VAR: rrr
 
 jobs:
   build:
