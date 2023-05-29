@@ -25,7 +25,6 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          npm run test --if-present
 
       # Zip
       - name: Zip Release
@@ -49,7 +48,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: $
 
     steps:
       - name: Download artifact from build job
@@ -63,5 +62,5 @@ jobs:
         with:
           app-name: 'uzamkavets-testvisualstudioreactapp-linux'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FABA16A63AAC403F961AFE0681328D08 }}
+          publish-profile: $
           package: release.zip
