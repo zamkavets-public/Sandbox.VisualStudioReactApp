@@ -2,8 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TextareaAutosize from 'react-textarea-autosize';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    useSearchParams,
+} from "react-router-dom";
 
 function App() {
+
+    const href = window.location.pathname;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,10 +29,51 @@ function App() {
           Learn React
         </a>
         <TextareaAutosize />
-        <p>{process.env.REACT_APP_TEST_VAR}</p>
+              <p>{process.env.REACT_APP_TEST_VAR}</p>
+              <p>{href}</p>
+              <Router>
+                  <Routes>
+                      <Route
+                          path="/"
+                          element={<Home />}
+                      />
+                      <Route
+                          path="blog"
+                          element={<Post />}
+                      />
+                      <Route path="*" element={<NotFound />} status={404} />
+                  </Routes>
+              </Router>
       </header>
     </div>
   );
+}
+
+function Home() {
+
+    return (
+        <div>
+            <p>Home</p>
+        </div>
+    );
+}
+
+function Post() {
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    return (
+        <div>
+            <p>{searchParams.get("id")}</p>
+        </div>
+    );
+}
+
+function NotFound() {
+    return (
+        <div>
+            Not Found!
+        </div>
+    )
 }
 
 export default App;
