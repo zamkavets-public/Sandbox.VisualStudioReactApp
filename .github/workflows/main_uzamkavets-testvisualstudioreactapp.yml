@@ -11,6 +11,7 @@ on:
   
 env:
   REACT_APP_TEST_VAR: rrr
+  REACT_APP_SITE_KEY: 6Ld_0IAmAAAAAMlcdFrZj3mOvvvQRqsawccJwCee
 
 jobs:
   build:
