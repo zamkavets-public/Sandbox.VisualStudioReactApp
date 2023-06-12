@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TextareaAutosize from 'react-textarea-autosize';
@@ -8,13 +8,10 @@ import {
     Route,
     useSearchParams,
 } from "react-router-dom";
-import ReCAPTCHA from "react-google-recaptcha"
 
 function App() {
 
     const href = window.location.pathname;
-    const sitekey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
-    const captchaRef = useRef(null);
 
   return (
     <div className="App">
@@ -47,13 +44,6 @@ function App() {
                       <Route path="*" element={<NotFound />} status={404} />
                   </Routes>
               </Router>
-
-              <ReCAPTCHA
-                  sitekey={sitekey}
-                  ref={captchaRef}
-                  onChange={() => console.log(captchaRef.current.getValue())}
-              />
-
       </header>
     </div>
   );
