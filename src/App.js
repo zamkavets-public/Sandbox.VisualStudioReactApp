@@ -9,6 +9,7 @@ import {
     useSearchParams,
 } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha"
+import Form from './Form'
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
                   onChange={() => console.log(captchaRef.current.getValue())}
               />
 
+              <Form/>
       </header>
     </div>
   );
